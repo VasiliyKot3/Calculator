@@ -27,7 +27,7 @@ namespace Calculator
                     continue;
                 }
                 
-                    Console.Write("Введите оператор (+ - / *): ");
+                    Console.Write("Введите оператор (+ - / * %): ");
                     str = Console.ReadLine();
 
                     switch (str)
@@ -59,8 +59,13 @@ namespace Calculator
                             Console.WriteLine(num1 * num2);
                             break;
 
+                        case "%":
+                        Console.Write($"Результат: {num1} % {num2} = ");
+                        Console.WriteLine(num1 % num2);
+                        break;
+
                         default:
-                            Console.WriteLine("Повторите ввод, и выберите оператор (+ - / *)");
+                            Console.WriteLine("Повторите ввод, и выберите оператор (+ - / * %)");
                             break;
                     }
                     Console.ReadLine();
